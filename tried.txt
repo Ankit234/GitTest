@@ -1,0 +1,300 @@
+$ diff --git somejunkfile2.txt dir/somejunkfile2.txt
+diff: unrecognized option `--git'
+diff: Try `diff --help' for more information.
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ diff -git somejunkfile2.txt dir/somejunkfile2.txt
+diff: invalid option -- g
+diff: Try `diff --help' for more information.
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git diff diff -git somejunkfile2.txt dir/somejunkfile2.txt
+fatal: ambiguous argument 'diff': unknown revision or path not in the working tr
+ee.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ add dir/somejunkfile2.txt
+sh.exe": add: command not found
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ add DIR/somejunkfile2.txt
+sh.exe": add: command not found
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git add DIR/somejunkfile2.txt
+warning: LF will be replaced by CRLF in DIR/somejunkfile2.txt.
+The file will have its original line endings in your working directory.
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git diff diff -git somejunkfile2.txt dir/somejunkfile2.txt
+fatal: ambiguous argument 'diff': unknown revision or path not in the working tr
+ee.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git diff diff --git somejunkfile2.txt dir/somejunkfile2.txt
+fatal: ambiguous argument 'diff': unknown revision or path not in the working tr
+ee.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ diff --git somejunkfile2.txt dir/somejunkfile2.txt
+diff: unrecognized option `--git'
+diff: Try `diff --help' for more information.
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git diff  somejunkfile2.txt dir/somejunkfile2.txt
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git diff --  somejunkfile2.txt dir/somejunkfile2.txt
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git diff
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -m "My initial commit" --author="A Genius <a_genius@linux.com>"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'vinove@VSS-WS77-DT024.(none)')
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git config --global user.name Ankit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -m "My initial commit" --author="A Genius <a_genius@linux.com>"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'vinove@VSS-WS77-DT024.(none)')
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git config --global user.email  aniket2008@gmail.com
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -m "My initial commit" --author="A Genius <a_genius@linux.com>"
+[master (root-commit) 727c561] My initial commit
+ Author: A Genius <a_genius@linux.com>
+warning: LF will be replaced by CRLF in DIR/somejunkfile2.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in proguard-project.txt.
+The file will have its original line endings in your working directory.
+ 2 files changed, 21 insertions(+)
+ create mode 100644 DIR/somejunkfile2.txt
+ create mode 100644 proguard-project.txt
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git remote add origin https://github.com/Ankit234/GitTest.git
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git push -u origin master
+Username for 'https://github.com': aniket2008@gmail.com
+Password for 'https://aniket2008@gmail.com@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 775 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/Ankit234/GitTest.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git log
+commit 727c561dc1bb3778f9456f6ea1ecd2964fe8516d
+Author: A Genius <a_genius@linux.com>
+Date:   Mon Jun 29 11:49:52 2015 +0530
+
+    My initial commit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -m "changes made" --author="Amit <Amit_genius@linux.com>"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+        somejunkfile
+        somejunkfile2
+        somejunkfile2.txt
+
+nothing added to commit but untracked files present
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git log
+commit 727c561dc1bb3778f9456f6ea1ecd2964fe8516d
+Author: A Genius <a_genius@linux.com>
+Date:   Mon Jun 29 11:49:52 2015 +0530
+
+    My initial commit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -m "changes made" --author="Amit <Amit_genius@linux.com>"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+        modified:   proguard-project.txt
+
+Untracked files:
+        somejunkfile
+        somejunkfile2
+        somejunkfile2.txt
+
+no changes added to commit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git log
+commit 727c561dc1bb3778f9456f6ea1ecd2964fe8516d
+Author: A Genius <a_genius@linux.com>
+Date:   Mon Jun 29 11:49:52 2015 +0530
+
+    My initial commit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git push -u origin master
+Username for 'https://github.com': aniket2008@gmail.com
+Password for 'https://aniket2008@gmail.com@github.com':
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git log
+commit 727c561dc1bb3778f9456f6ea1ecd2964fe8516d
+Author: A Genius <a_genius@linux.com>
+Date:   Mon Jun 29 11:49:52 2015 +0530
+
+    My initial commit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -m "changes made" --author="Amit <Amit_genius@linux.com>"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+        modified:   proguard-project.txt
+
+Untracked files:
+        somejunkfile
+        somejunkfile2
+        somejunkfile2.txt
+
+no changes added to commit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git remote add origin https://github.com/Ankit234/GitTest.git
+fatal: remote origin already exists.
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ add DIR/somejunkfile2.txt
+sh.exe": add: command not found
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git add DIR/somejunkfile2.txt
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -m "changes made" --author="Amit <Amit_genius@linux.com>"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+        modified:   proguard-project.txt
+
+Untracked files:
+        somejunkfile
+        somejunkfile2
+        somejunkfile2.txt
+
+no changes added to commit
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   proguard-project.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        somejunkfile
+        somejunkfile2
+        somejunkfile2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git add somejunkfile2.txt
+warning: LF will be replaced by CRLF in somejunkfile2.txt.
+The file will have its original line endings in your working directory.
+
+vinove@VSS-WS77-DT024 ~/git-test (master)
+$ git commit -a
+warning: LF will be replaced by CRLF in proguard-project.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in proguard-project.txt.
+The file will have its original line endings in your working directory.
+new shell started
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+c:\Users\vinove\git-test>git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and integrate with another repository or a local branch
+
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+c:\Users\vinove\git-test>
